@@ -7,9 +7,9 @@ describe('Footer Component', () => {
     it('renders the footer with links', () => {
         render(<Footer />);
 
-        const aboutLink = screen.getByText(/About/i);
-        const termsLink = screen.getByText(/Terms/i);
-        const privacyPolicyLink = screen.getByText(/Privacy Policy/i);
+        const aboutLink = screen.getByText('About');
+        const termsLink = screen.getByText('Terms');
+        const privacyPolicyLink = screen.getByText('Privacy Policy');
 
         expect(aboutLink).toBeInTheDocument();
         expect(termsLink).toBeInTheDocument();
