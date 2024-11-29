@@ -11,6 +11,7 @@ type SelectProps = {
 const Select = ({ options, onChange, placeholder, value }: SelectProps) => {
     return (
         <select
+            aria-label={placeholder}
             value={value}
             onChange={(e) => onChange(e.target.value)}
             className="border rounded ml-2 px-2"

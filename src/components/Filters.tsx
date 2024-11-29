@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react";
-import { categoryOptions, sortingOption } from "@/constants";
+import { categoryOptions, sortingOption } from "../constants";
 import Select from "./Select";
 
 const Filters = ({
@@ -15,8 +15,10 @@ const Filters = ({
 
     const [category, setCategory] = useState<string>("");
     const [sort, setSort] = useState<string>("");
+    const [searchTerm, setSearchTerm] = useState<string>('');
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchTerm(event.target.value);
         onFilter(event.target.value);
     };
 
@@ -31,10 +33,10 @@ const Filters = ({
     return (
         <div className="mb-4 mx-20 mt-4 flex">
             <input
-                type="text"
-                placeholder="Search Products.."
-                onChange={handleChange}
                 className="border p-2 w-[500px] rounded"
+                placeholder="Search Products.."
+                value={searchTerm}
+                onChange={handleChange}
             />
             <Select
                 options={categoryOptions.map((item) => ({

@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react";
-import ProductList from '@/components/ProductList';
+import ProductList from '../components/ProductList';
 import Filters from '@/components/Filters';
 
 type Product = { id: number; name: string; price: number; category: string };
