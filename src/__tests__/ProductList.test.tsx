@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
 import Home from '../app/page';
 import '@testing-library/jest-dom';
-import { mockProducts } from '@/constants';
+import { mockProducts } from '../constants';
 
 type Product = { id: number; name: string; price: number; category: string };
 
