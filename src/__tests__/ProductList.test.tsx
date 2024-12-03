@@ -2,15 +2,10 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
 import Home from '../app/page';
 import '@testing-library/jest-dom';
+import { mockProducts } from '@/constants';
 
 type Product = { id: number; name: string; price: number; category: string };
 
-// Mock data
-const mockProducts: Product[] = [
-    { id: 1, name: 'Product 1', price: 29.99, category: 'Category A' },
-    { id: 2, name: 'Product 2', price: 49.99, category: 'Category B' },
-    { id: 3, name: 'Product 3', price: 19.99, category: 'Category A' },
-];
 
 describe('Home Component', () => {
     beforeEach(() => {
