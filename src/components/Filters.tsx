@@ -2,17 +2,13 @@
 import React, { useState } from "react";
 import { categoryOptions } from "../constants";
 import Select from "./Select";
-
-const Filters = ({
-    onFilter,
-    onSelectCategory
-}: {
+interface FiltersProps {
     onFilter: (query: string) => void;
     onSelectCategory: (query: string) => void;
-}) => {
+}
 
+const Filters: React.FC<FiltersProps> = ({ onFilter, onSelectCategory }) => {
     const [category, setCategory] = useState<string>("");
-    const [sort, setSort] = useState<string>("");
     const [searchTerm, setSearchTerm] = useState<string>('');
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,9 +20,7 @@ const Filters = ({
         setCategory(value)
         onSelectCategory(value)
     }
-    const handleSortProducts = (value: string) => {
-        setSort(value)
-    };
+
     return (
         <div className="mb-4 mx-20 mt-4 flex">
             <input

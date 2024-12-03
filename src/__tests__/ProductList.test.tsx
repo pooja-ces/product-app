@@ -4,9 +4,6 @@ import Home from '../app/page';
 import '@testing-library/jest-dom';
 import { mockProducts } from '../constants';
 
-type Product = { id: number; name: string; price: number; category: string };
-
-
 describe('Home Component', () => {
     beforeEach(() => {
         // Mock fetch API response

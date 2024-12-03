@@ -1,5 +1,12 @@
-type Product = { id: number; name: string; price: number; category: string };
-// Define the type for a product
+export type Product = { id: number; name: string; price: number; category: string };
+
+export type SelectProps = {
+    options: { value: string; name: string }[];
+    onChange: (value: string) => void;
+    placeholder: string;
+    value?: string;
+};
+
 interface Products {
     id: number;
     name: string;
@@ -7,7 +14,6 @@ interface Products {
     category: string;
     description: string;
 }
-
 
 export const categoryOptions = [
     { value: "Electronics" },

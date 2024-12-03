@@ -1,12 +1,6 @@
 
+import { SelectProps } from '../constants';
 import React from 'react';
-
-type SelectProps = {
-    options: { value: string; name: string }[];
-    onChange: (value: string) => void;
-    placeholder: string;
-    value?: string;
-};
 
 const Select = ({ options, onChange, placeholder, value }: SelectProps) => {
     return (

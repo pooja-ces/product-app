@@ -1,5 +1,5 @@
-import { products } from '@/constants';
 import { NextResponse } from 'next/server';
+import { products } from '../../../constants';
 
 export async function GET(req: Request) {
     try {
