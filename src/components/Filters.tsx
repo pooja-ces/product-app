@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useState } from "react";
 import { categoryOptions } from "../constants";
 import Select from "./Select";
@@ -9,7 +10,7 @@ interface FiltersProps {
 
 const Filters: React.FC<FiltersProps> = ({ onFilter, onSelectCategory }) => {
     const [category, setCategory] = useState<string>("");
-    const [searchTerm, setSearchTerm] = useState<string>('');
+    const [searchTerm, setSearchTerm] = useState<string>("");
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(event.target.value);

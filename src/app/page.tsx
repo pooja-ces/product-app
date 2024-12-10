@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useState } from "react";
 import ProductList from '../components/ProductList';
 import Filters from '../components/Filters';
